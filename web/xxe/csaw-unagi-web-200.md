@@ -1,6 +1,6 @@
 # Challenge Name: Unagi
 Score: 200 <br>
-Vulnerability: XXE <br>
+Vulnerability: External XML Entity (XXE) <br>
 Solution: Bypass character encoding <br>
 Link: http://web.chal.csaw.io:1003
 
