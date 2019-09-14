@@ -28,14 +28,13 @@ Displayed information of users on `user.php` page are `name`, `email`, `group`, 
 ```
 About.php page gives us a hint that the flag is located at `/flag.txt`.
 
-**Part 0x02 - Vulnerability Assessment** <br>
+**Part 0x02 - Vulnerability Exploitation** <br>
 We can perform an External XML Entity (XXE) attack on this challenge.
 ![](https://github.com/ajdumanhug/ctf/blob/master/web/xxe/files/Screen%20Shot%202019-09-14%20at%2011.51.22%20PM.png)
 Adding the following payload `<!DOCTYPE root [<!ENTITY test SYSTEM 'file:///etc/passwd'>]>` throws a WAF error message.
 ![](https://github.com/ajdumanhug/ctf/blob/master/web/xxe/files/Screen%20Shot%202019-09-14%20at%2011.56.02%20PM.png)
 So to solve this, we have to look for WAF bypass to exploit the vulnerability.
 
-**Part 0x03 - Exploitation** <br>
 Searching on Google gives us this article: https://www.phdays.com/en/press/news/phdays-vi-waf-bypass-contest/. Check out #3 for XXE WAF Bypass. 
 <br>
 
